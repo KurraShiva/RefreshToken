@@ -1,0 +1,77 @@
+<!--  <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div style="text-align: center; margin-top: 100px;">
+        <h1>Welcome to OAuth2 Demo</h1>
+        <p>This is a demo application showing GitHub OAuth2 integration</p>
+        <div>
+            <a th:href="@{/login}">Login with GitHub</a> |
+            <a th:href="@{/dashboard}">Dashboard</a> |
+            <a th:href="@{/users}">Users API</a>
+        </div>
+    </div>
+</body>
+</html> 
+-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home - OAuth2 Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            background: #2ea44f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #22863a;
+        }
+        .nav {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to OAuth2 Demo Application</h1>
+        <p>This application demonstrates GitHub OAuth2 integration with Spring Boot</p>
+        
+        <div class="nav">
+            <a th:href="@{/login}" class="btn">Login with GitHub</a>
+            <a th:href="@{/dashboard}" class="btn">Dashboard</a>
+            <a th:href="@{/users}" class="btn">View Users API</a>
+        </div>
+        
+        <div th:if="${param.logout}" style="color: green; margin-top: 20px;">
+            You have been logged out successfully.
+        </div>
+    </div>
+</body>
+</html>
